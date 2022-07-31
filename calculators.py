@@ -27,7 +27,6 @@ class RPNCalculator:
                 self.stack.append(float(token))
             else:
                 operands = self.stack.pop(), self.stack.pop()
-                print(*operands)
                 result =self.operators[token](*operands)
                 self.stack.append(result)
         return self.stack[0]
