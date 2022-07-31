@@ -5,13 +5,21 @@ def is_number(token):
     except ValueError:
         return False
 
-operators = {'+': lambda x,y: x + y}
+
+
 
 class RPNCalculator:
 
+    operators = {
+                "+": lambda x, y: x + y,
+                "-": lambda x, y: y - x,
+                "*": lambda x, y: x * y,
+                "/": lambda x, y: y / x,
+            }
+
     def __init__(self):
         self.stack = []
-        
+
     def eval(self, expression: str):
         tokens = expression.split()
         for token in tokens:
@@ -20,12 +28,20 @@ class RPNCalculator:
             else:
                 operands = self.stack.pop(), self.stack.pop()
                 print(*operands)
-                result = operators[token](*operands)
+                result =self.operators[token](*operands)
                 self.stack.append(result)
         return self.stack[0]
 
+
 class PNCalculator:
-    
+    operators = {
+                "+": lambda x, y: x + y,
+                "-": lambda x, y: x - y,
+                "*": lambda x, y: x * y,
+                "/": lambda x, y: x / y,
+            }
+
+
     def __init__(self):
         self.operand_stack = []
         self.operator_stack = []
@@ -38,7 +54,7 @@ class PNCalculator:
                     operand1 = float(token)
                     operand2 = float(self.operand_stack.pop())
                     operator = self.operator_stack.pop()
-                    result = operators[operator](operand1, operand2)
+                    result = self.operators[operator](operand1, operand2)
                     self.operand_stack.append(result)
                 else:
                     self.operand_stack.append(token)
