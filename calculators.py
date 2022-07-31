@@ -49,9 +49,6 @@ class PNCalculator:
     def eval(self, expr):
         tokens = expr.split()
         for token in tokens:
-            print(f'{token}')
-            print(f'{self.operand_stack}')
-            print(f'{self.operator_stack}')
             if is_number(token):
                 if self.operand_stack:
                     operand1 = float(self.operand_stack.pop())
