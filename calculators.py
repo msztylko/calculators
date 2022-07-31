@@ -49,17 +49,18 @@ class PNCalculator:
     def eval(self, expr):
         tokens = expr.split()
         for token in tokens:
+            print(f'{token}')
+            print(f'{self.operand_stack}')
+            print(f'{self.operator_stack}')
             if is_number(token):
-                if operand_ready:
-                    operand1 = float(token)
-                    operand2 = float(self.operand_stack.pop())
+                if self.operand_stack:
+                    operand1 = float(self.operand_stack.pop())
+                    operand2 = float(token)
                     operator = self.operator_stack.pop()
                     result = self.operators[operator](operand1, operand2)
                     self.operand_stack.append(result)
                 else:
                     self.operand_stack.append(token)
-                    operand_ready = True
             else:
                 self.operator_stack.append(token)
-                operand_ready = False
         return self.operand_stack[0]
