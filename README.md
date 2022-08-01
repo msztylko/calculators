@@ -1,5 +1,9 @@
 # calculators
 
+<p align="center">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/39266310/182230990-6ce4cb70-0764-464c-8172-ca4354028ce6.png">
+</p>
+
 Exploration of interpreters for algebraic expressions. 
 Inspiration came from watching [Brian Harvey’s lecture](https://archive.org/details/ucberkeley_webcast_nzMPF59Ackg) about calculator, 
 as a part of my [SICP reading](https://github.com/msztylko/SICP)
