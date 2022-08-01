@@ -44,4 +44,7 @@ that use the same Lexer. Implementation can found towards the end of [calculator
 [Brian Harvey’s lecture](https://archive.org/details/ucberkeley_webcast_nzMPF59Ackg) 
 I've mentioned at the beginning. 
 So far, I've only focused on my approach to the calculator interpreter and 
-it's very different from [the one explained during the lecture](./calculator.scm).
+it's very different from [the one explained during the lecture](./calculator.scm).  
+
+One important difference is that this calculators works with Polish Notation, but expects the input to be in the form of [S-expression](https://en.wikipedia.org/wiki/S-expression), i.e.
+`(+ 2 3)` instead of `+ 2 3`.
