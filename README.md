@@ -37,3 +37,11 @@ Calculator using infix notation is provided as en [example](https://github.com/d
  - RPNCalcParser  
 
 that use the same Lexer. Implementation can found towards the end of [calculators.py](./calculators.py)
+
+## Alternative Approach
+
+**Fun fact:** non of the so far presented implementations is related to 
+[Brian Harvey’s lecture](https://archive.org/details/ucberkeley_webcast_nzMPF59Ackg) 
+I've mentioned at the beginning. 
+So far, I've only focused on my approach to the calculator interpreter and 
+it's very different from [the one explained during the lecture](./calculator.scm).
