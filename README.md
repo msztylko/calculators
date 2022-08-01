@@ -33,6 +33,7 @@ However, this reminded me about a more modern tool,
 [SLY](https://github.com/dabeaz/sly) which I wanted to try for a long time.
 
 Calculator using infix notation is provided as en [example](https://github.com/dabeaz/sly#an-example) in SLY documentation. Based on that I created two new parsers:
- - PNCalcParser
- - RPNCalcParser
+ - PNCalcParser  
+ - RPNCalcParser  
+
 that use the same Lexer. Implementation can found towards the end of [calculators.py](./calculators.py)
