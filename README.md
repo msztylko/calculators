@@ -29,4 +29,10 @@ we pop it from stack, pop operator from stack and use it to evaluate current two
 
 My initial plan was to re-implement infix calculator with *yacc* and *lex* 
 as I remember reading about it in [The Unix Programming Environment](https://en.wikipedia.org/wiki/The_Unix_Programming_Environment) book. 
-However, this reminded me about a more modern tool, [SLY](https://github.com/dabeaz/sly) which I wanted to try for a long time.
+However, this reminded me about a more modern tool, 
+[SLY](https://github.com/dabeaz/sly) which I wanted to try for a long time.
+
+Calculator using infix notation is provided as en [example](https://github.com/dabeaz/sly#an-example) in SLY documentation. Based on that I created two new parsers:
+ - PNCalcParser
+ - RPNCalcParser
+that use the same Lexer. Implementation can found towards the end of [calculators.py](./calculators.py)
