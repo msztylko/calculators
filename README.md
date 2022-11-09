@@ -40,7 +40,7 @@ Calculator using infix notation is provided as en [example](https://github.com/d
  - PNCalcParser  
  - RPNCalcParser  
 
-that use the same Lexer. Implementation can found towards the end of [calculators.py](./calculators.py)
+that use the same Lexer. Implementation can be found towards the end of [calculators.py](./calculators.py)
 
 ## Alternative Approach
 
